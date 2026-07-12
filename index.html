@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>CodeQuest – Spielerisch programmieren lernen</title>
+<meta name="description" content="Lerne HTML, CSS und JavaScript spielerisch mit CodeQuest – Level für Level, wie eine Platine voller Leiterbahnen.">
+<meta name="theme-color" content="#090d0c">
+
+<link rel="manifest" href="./manifest.json">
+<link rel="icon" href="./icons/icon-192.png">
+<link rel="apple-touch-icon" href="./icons/icon-192.png">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600;700;800&family=Manrope:wght@400;600;700;800&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+<div class="app-shell">
+  <header class="app-header">
+    <div class="brand">
+      <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <rect x="7" y="7" width="10" height="10" rx="2" stroke="#5EEAD4" stroke-width="1.6"/>
+        <path d="M9 2v3M15 2v3M9 19v3M15 19v3M2 9h3M2 15h3M19 9h3M19 15h3" stroke="#a97347" stroke-width="1.6" stroke-linecap="round"/>
+      </svg>
+      Code<span class="dot">Quest</span>
+    </div>
+    <div class="header-stats" id="header-stats"></div>
+  </header>
+  <div class="xp-bar-wrap">
+    <div class="xp-bar-track"><div class="xp-bar-fill" id="xp-bar-fill"></div></div>
+    <div class="xp-bar-label" id="xp-bar-label"></div>
+  </div>
+
+  <main id="app-root"></main>
+</div>
+
+<script src="./js/data/levels.js"></script>
+<script src="./js/engine/validators.js"></script>
+<script src="./js/engine/codeRunner.js"></script>
+<script src="./js/engine/progress.js"></script>
+<script src="./js/engine/mapRenderer.js"></script>
+<script src="./js/app.js"></script>
+</body>
+</html>

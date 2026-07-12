@@ -1,0 +1,16 @@
+{
+  "name": "CodeQuest – Spielerisch programmieren lernen",
+  "short_name": "CodeQuest",
+  "description": "Lerne HTML, CSS und JavaScript Level für Level – wie eine Platine voller Leiterbahnen.",
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#090d0c",
+  "theme_color": "#090d0c",
+  "orientation": "portrait-primary",
+  "icons": [
+    { "src": "./icons/icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
+    { "src": "./icons/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" },
+    { "src": "./icons/icon-512-maskable.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
+  ]
+}
