@@ -8,8 +8,64 @@
 
 const WELTEN = [
   {
-    id: 'w1',
+    id: 'w0',
     nr: 1,
+    title: 'Bevor es losgeht',
+    subtitle: 'Die Grundidee hinter jeder Webseite',
+    icon: 'intro',
+    levels: [
+      {
+        id: 'w0-l1', type: 'quiz', title: 'Was ist eine Webseite?', xp: 5,
+        intro: 'Wenn du eine Seite im Internet öffnest, siehst du Text, Bilder und Buttons. Aber woher weiß dein Handy oder Computer, wie das alles aussehen soll?',
+        question: 'Eine Webseite besteht im Kern aus …',
+        choices: [
+          'Einer Textdatei mit Anweisungen, die der Browser liest',
+          'Einem Foto, das irgendwo hochgeladen wurde',
+          'Einem Video, das abgespielt wird',
+          'Einer App, die man vorher installieren muss'
+        ],
+        correctIndex: 0,
+        explanation: 'Genau! Eine Webseite ist im Kern eine Textdatei mit Anweisungen. Diese Anweisungen nennt man Code.'
+      },
+      {
+        id: 'w0-l2', type: 'quiz', title: 'Was macht ein Browser?', xp: 5,
+        intro: 'Chrome, Safari, Firefox – das sind Browser. Man kann sie sich wie einen Übersetzer vorstellen.',
+        question: 'Was ist die Aufgabe eines Browsers?',
+        choices: [
+          'Er liest den Code einer Webseite und baut daraus das fertige Bild auf dem Bildschirm',
+          'Er schreibt den Code automatisch selbst',
+          'Er speichert ausschließlich Passwörter',
+          'Er wird nur zum Ansehen von Videos benutzt'
+        ],
+        correctIndex: 0,
+        explanation: 'Genau. Der Browser liest die Anweisungen (den Code) und zeigt dir das Ergebnis an – Texte, Bilder, Buttons, alles.'
+      },
+      {
+        id: 'w0-l3', type: 'quiz', title: 'Was ist "Code" eigentlich?', xp: 5,
+        intro: 'Code klingt kompliziert, ist aber erstmal nur: Text. Allerdings Text nach ganz klaren, festen Regeln – wie eine Bauanleitung, die der Browser genau befolgt. Keine Mathematik, keine Formeln nötig.',
+        question: '"Code schreiben" bedeutet vor allem …',
+        choices: [
+          'Text nach festen Regeln in eine Datei schreiben',
+          'Etwas auswendig lernen wie ein Gedicht',
+          'Nur mit der Maus auf Buttons klicken',
+          'Ein Bild mit einem Zeichenprogramm malen'
+        ],
+        correctIndex: 0,
+        explanation: 'Richtig! Du schreibst Text nach festen Regeln. Diese Regeln lernst du hier ganz in Ruhe, Schritt für Schritt.'
+      },
+      {
+        id: 'w0-l4', type: 'quiz', title: 'Die drei Werkzeuge', xp: 5,
+        intro: 'Eine Webseite entsteht meist aus drei Bausteinen, die zusammenarbeiten – wie beim Hausbau: HTML ist der Rohbau (Wände, Räume, Türen). CSS ist die Einrichtung und Farbe (Tapete, Möbel). JavaScript ist die Technik (Lichtschalter, die etwas passieren lassen).',
+        question: 'Welcher Baustein legt fest, WAS auf der Seite ist – z. B. "hier ist eine Überschrift, hier ein Absatz"?',
+        choices: ['HTML', 'CSS', 'JavaScript', 'Der Browser'],
+        correctIndex: 0,
+        explanation: 'Genau: HTML gibt der Seite ihr Grundgerüst. CSS macht sie hübsch, JavaScript macht sie interaktiv. Wir fangen jetzt mit HTML an – Schritt für Schritt, ohne Vorwissen.'
+      }
+    ]
+  },
+  {
+    id: 'w1',
+    nr: 2,
     title: 'HTML-Fundament',
     subtitle: 'Die Bausteine des Web',
     icon: 'html',
@@ -66,7 +122,7 @@ const WELTEN = [
   },
   {
     id: 'w2',
-    nr: 2,
+    nr: 3,
     title: 'CSS-Werkstatt',
     subtitle: 'Farbe, Form & Layout',
     icon: 'css',
@@ -127,7 +183,7 @@ const WELTEN = [
   },
   {
     id: 'w3',
-    nr: 3,
+    nr: 4,
     title: 'JavaScript-Start',
     subtitle: 'Variablen & Logik',
     icon: 'js',
@@ -184,7 +240,7 @@ const WELTEN = [
   },
   {
     id: 'w4',
-    nr: 4,
+    nr: 5,
     title: 'Funktionen & Schleifen',
     subtitle: 'Code wiederverwenden',
     icon: 'loop',
@@ -241,7 +297,7 @@ const WELTEN = [
   },
   {
     id: 'w5',
-    nr: 5,
+    nr: 6,
     title: 'DOM & Interaktion',
     subtitle: 'Webseiten lebendig machen',
     icon: 'dom',
@@ -302,7 +358,7 @@ const WELTEN = [
   },
   {
     id: 'w6',
-    nr: 6,
+    nr: 7,
     title: 'Boss-Projekte',
     subtitle: 'Alles zusammen anwenden',
     icon: 'trophy',
