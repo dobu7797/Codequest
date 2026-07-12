@@ -1,7 +1,7 @@
 // Einfacher "App-Shell" Service Worker – funktioniert auf GitHub Pages
 // unter jedem Unterpfad, da ausschließlich relative Pfade genutzt werden.
 
-const CACHE_NAME = 'codequest-cache-v1';
+const CACHE_NAME = 'codequest-cache-v2';
 const APP_SHELL = [
   './',
   './index.html',
