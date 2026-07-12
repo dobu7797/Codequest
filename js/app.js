@@ -87,7 +87,7 @@ function renderLevelView(levelId) {
       ${topbar}
       <div class="level-card">
         <h1 class="level-title">${level.title}</h1>
-        <p class="level-intro">${level.intro}</p>
+        <p class="level-intro">${escapeHtml(level.intro)}</p>
         ${bodyHtml}
       </div>
     </div>`;
@@ -98,11 +98,11 @@ function renderLevelView(levelId) {
 
 function renderQuizBody(level) {
   const choicesHtml = level.choices.map((c, i) => `
-    <button class="quiz-choice" data-idx="${i}">${c}</button>
+    <button class="quiz-choice" data-idx="${i}">${escapeHtml(c)}</button>
   `).join('');
   return `
     <div class="quiz-choices" id="quiz-choices">
-      <p style="font-weight:700; margin: 10px 0 2px;">${level.question}</p>
+      <p style="font-weight:700; margin: 10px 0 2px;">${escapeHtml(level.question)}</p>
       ${choicesHtml}
     </div>
     <div class="feedback-box" id="feedback"></div>
@@ -124,7 +124,7 @@ function renderFillBody(level) {
   return `
     <div class="code-panel">${html}</div>
     <button class="btn btn-secondary" id="btn-hint" style="margin-top:12px;">💡 Hinweis</button>
-    <p class="hint-text" id="hint-text">${level.hint || ''}</p>
+    <p class="hint-text" id="hint-text">${escapeHtml(level.hint || '')}</p>
     <div class="feedback-box" id="feedback"></div>
     <div class="action-row">
       <button class="btn btn-primary" id="btn-check">Prüfen</button>
@@ -136,7 +136,7 @@ function renderCodeBody(level) {
   const lines = (level.starter || '').split('\n').length;
   const gutter = Array.from({ length: Math.max(lines, 6) }, (_, i) => i + 1).join('\n');
   return `
-    <div class="level-goal"><b>Aufgabe:</b> ${level.goalDescription}</div>
+    <div class="level-goal"><b>Aufgabe:</b> ${escapeHtml(level.goalDescription)}</div>
     <div class="code-panel">
       <div class="code-editor-wrap">
         <div class="code-gutter" id="code-gutter">${gutter}</div>
@@ -148,7 +148,7 @@ function renderCodeBody(level) {
       </div>
     </div>
     <button class="btn btn-secondary" id="btn-hint" style="margin-top:12px;">💡 Hinweis</button>
-    <p class="hint-text" id="hint-text">${level.hint || 'Lies die Aufgabe genau: Welche Tags/Eigenschaften/Befehle brauchst du?'}</p>
+    <p class="hint-text" id="hint-text">${escapeHtml(level.hint || 'Lies die Aufgabe genau: Welche Tags/Eigenschaften/Befehle brauchst du?')}</p>
     <div class="feedback-box" id="feedback"></div>
     <div class="action-row">
       <button class="btn btn-primary" id="btn-run">▶ Code ausführen & prüfen</button>
